@@ -1,6 +1,7 @@
 # FILENAME='aoc03-0.txt'
 FILENAME='aoc03-1.txt'
 
+
 def parse_input(filename: str) -> list:
     with open(filename, "r", encoding="utf-8") as file:
         return [line.strip() for line in file.readlines()]
@@ -19,6 +20,7 @@ def main():
     print(f"Joltages: {joltages}")
     total = sum(joltages)
     print(f"Total joltage: {total}")
+
 
 if __name__ == '__main__':
     main()

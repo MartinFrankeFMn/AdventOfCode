@@ -1,6 +1,7 @@
 # FILENAME='aoc03-0.txt'
 FILENAME='aoc03-1.txt'
 
+
 def parse_input(filename: str) -> list:
     with open(filename, "r", encoding="utf-8") as file:
         return [line.strip() for line in file.readlines()]
@@ -12,8 +13,6 @@ def get_joltage(line: str, k: int) -> int:
     for d in range(k):
         r = k - d
         for j in range(startpos, len(digits) - r + 1):
-            i = j - d
-            assert(i >= 0)
             assert(j < len(digits))
             if digits[j] > maxima[d]:
                 maxima[d] = digits[j]
@@ -26,6 +25,7 @@ def main():
     print(f"Joltages: {joltages}")
     total = sum(joltages)
     print(f"Total joltage: {total}")
+
 
 if __name__ == '__main__':
     main()

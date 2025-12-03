@@ -1,8 +1,6 @@
 # FILENAME='aoc02-0.txt'
 FILENAME='aoc02-1.txt'
 
-START=50
-
 def parse_input(filename: str) -> list:
     with open(filename, "r", encoding="utf-8") as file:
         return [line.strip() for line in file.readlines()]
@@ -28,6 +26,7 @@ def main():
       print(', '.join(str(id) for id in invalid_ids))
       total += sum(invalid_ids)
       print(total)
+
 
 if __name__ == '__main__':
     main()
